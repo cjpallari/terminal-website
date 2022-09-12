@@ -8,7 +8,7 @@ pre {
 }
 
 p {
-    color: hsl(157deg 55% 51%);
+    color: hsl(157deg 35% 41%);
     font-size: 1.08em;
 }
 
@@ -23,32 +23,20 @@ ul {
 }
 
 li {
+    display: block;
+    line-height: 1.3em;
+    margin: 0;
     overflow: hidden;
-    list-style-type: none;
     white-space: nowrap;
-    margin: 0 auto;
-    line-height: 1.5em;
+    margin: 0;
     letter-spacing: 0.05em;
-    /* animation: typing 0.5s forwards; */
+    animation: typing 0.5s steps(30, end);
     color: hsl(193deg 50% 45%);
 }
 
 .textInput{
     color: white;
 }
-
-/* li {
-    animation: typing 2s steps(22);
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-  } */
 
 /*   .container {
     width: 10px;
@@ -57,11 +45,28 @@ li {
     margin-top: px;
   } */
 
-cursor {
-    color: white;
-}
+.cursor {
+    font-size: 12px;
+    color: #73ABAD;
+    background-color: #73ABAD;
+    position: relative;
+    opacity: 1;
+    height: 1.5em;
+    width: 10px;
+    max-width: 10px;
+    transform: translateY(4px);
+    overflow: hidden;
+    text-indent: -5px;
+    display: inline-block;
+    text-decoration: blink;
+    animation: blinker 1s linear infinite;
+  }
 
-@keyframes typing {
-    from {width: 0}
-    to {width: 100%}
-}
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
