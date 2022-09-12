@@ -7,9 +7,14 @@ let help = [
     "about\n",
     "socials\n",
     "projects\n",
+    "contact\n",
     "history\n",
     "banner\n",
     "clear"
+]
+
+let about = [
+    "My name is CJ Pallari, and I am currently studying computer science at Sacramento State University.\n"
 ]
 let commands = [];
 
@@ -29,7 +34,7 @@ function main(e)
                 case 'help':
                     document.querySelector('.textInput').innerHTML = '<br>';  //Adds new line after pressing enter
                     cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                    cmd.style.color = 'hsl(157deg 55% 51%)';
+                    cmd.style.color = 'hsl(157deg 35% 41%)';
                     newLine.appendChild(cmd);
                     li.innerText = inp;
                     newLine.appendChild(li);
@@ -39,7 +44,7 @@ function main(e)
                     case 'about':
                         document.querySelector('.textInput').innerHTML = '<br>';
                         cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                        cmd.style.color = 'hsl(157deg 55% 51%)';
+                        cmd.style.color = 'hsl(157deg 35% 41%)';
                         newLine.appendChild(cmd);
                         li.innerText = "Some random stuff about me";
                         newLine.appendChild(li);
@@ -47,7 +52,7 @@ function main(e)
                         case 'socials':
                             document.querySelector('.textInput').innerHTML = '<br>';
                             cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                            cmd.style.color = 'hsl(157deg 55% 51%)';
+                            cmd.style.color = 'hsl(157deg 35% 41%)';
                             newLine.appendChild(cmd);
                             li.innerText = "Links to socials";
                             newLine.appendChild(li);
@@ -55,7 +60,7 @@ function main(e)
                             case 'projects':
                                 document.querySelector('.textInput').innerHTML = '<br';
                                 cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                                cmd.style.color = 'hsl(157deg 55% 51%)';
+                                cmd.style.color = 'hsl(157deg 35% 41%)';
                                 newLine.appendChild(cmd);
                                 li.innerText = "You're looking at it";
                                 newLine.appendChild(li);
@@ -66,7 +71,7 @@ function main(e)
                                     case 'history':
                                         document.querySelector('.textInput').innerHTML = '<br>';
                                         cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                                        cmd.style.color = 'hsl(157deg 55% 51%)';
+                                        cmd.style.color = 'hsl(157deg 35% 41%)';
                                         newLine.appendChild(cmd);
                                         li.innerText = `${commands}`;
                                         newLine.appendChild(li);
@@ -74,7 +79,7 @@ function main(e)
                                         case 'banner':
                                             document.querySelector('.textInput').innerHTML= '<br>';
                                             cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
-                                            cmd.style.color = 'hsl(157deg 55% 51%)';
+                                            cmd.style.color = 'hsl(157deg 50% 41%)';
                                             newLine.appendChild(cmd);
                                             li.innerText = `${asciiArt}`;
                                             newLine.appendChild(li);
