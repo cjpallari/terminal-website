@@ -1,8 +1,67 @@
 *{
-    background-color: #3D3C3B;
+    background-color: hsl(232deg 16% 12%);
 }
 
-/* #cursor {
+pre {
+    padding-top: 0!;
+    color: hsl(279deg 53% 44%);
+}
+
+p {
+    color: hsl(157deg 55% 51%);
+    font-size: 1.08em;
+}
+
+input {
+    text-decoration: none;
     border: none;
-    border-style: none;
-} */
+    outline: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    overflow: hidden;
+    list-style-type: none;
+    white-space: nowrap;
+    margin: 0 auto;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    /* animation: typing 0.5s forwards; */
+    color: hsl(193deg 50% 45%);
+}
+
+.textInput{
+    color: white;
+}
+
+/* li {
+    animation: typing 2s steps(22);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  } */
+
+/*   .container {
+    width: 10px;
+    height: 10px;
+    background: white;
+    margin-top: px;
+  } */
+
+cursor {
+    color: white;
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
