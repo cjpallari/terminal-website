@@ -1,57 +1,90 @@
-let inp = document.getElementById('textInput');
-let test = document.querySelector('h1');
-/* inp.focus();
-inp.select(); */
-
 let newLine = document.getElementById('flow');
 let userInput = document.querySelector('input').value;
+let asciiArt = document.querySelector('pre').textContent;
+let count = 0;
 
 let help = [
-    "about      Who is CJ?",
-    "socials    Links to my socials",
-    "projects   Projects I've worked on",
-    "clear      Clear terminal"
+    "about\n",
+    "socials\n",
+    "projects\n",
+    "history\n",
+    "banner\n",
+    "clear"
 ]
 let commands = [];
 
-function input(inp)
+document.querySelector('.textInput').addEventListener('keypress', main);
+function main(e)
 {
-    switch (inp.toLowerCase())
-    {
-        case 'help':
-            document.write('\n');
-            newLine.innerHTML = `<p> ${help} </p>`;
-            break;
-        case 'about':
-            newLine.innerHTML = "Some random stuff about me";
-            break;
-        case 'socials':
-            newLine.innerHTML = "Links to my social media accoutns";
-            break;
-        case 'projects':
-            newLine.innerHTML = "You're looking at it"
-            break;
-        case 'clear':
-            //need to figure out how to clear
-            break;
-    }
-}
-
-function enter(){
-    if (keyCode = 13)
-    {
-        commands.push(inp.innerHTML);
-        console.log(userInput);
-    }
-
-}
-
-
-test.addEventListener('click', testing);
-function testing(e){
-    let newTest = document.querySelector('.textInput').value
-    document.write("<br>");
-    document.write(help);
-    e.preventDefault();
-}
-
+    let inp = document.querySelector('.textInput').value;
+    let inp1 = document.querySelector('input');
+    if (e.key === 'Enter') { //If enter is pressed
+        let li = document.createElement("li");  //Allows me to create new list items
+        let cmd = document.createElement("li");  //Second list item var to print command that was entered
+        inp1.value = '';  //Resets text box to empty
+            count++;
+            commands.push(inp);  //Holds all commands entered for history case
+            switch (inp.toLowerCase())  //Accepted commands will be held inside
+            {
+                case 'help':
+                    document.querySelector('.textInput').innerHTML = '<br>';  //Adds new line after pressing enter
+                    cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                    cmd.style.color = 'hsl(157deg 55% 51%)';
+                    newLine.appendChild(cmd);
+                    li.innerText = inp;
+                    newLine.appendChild(li);
+                    li.innerText = `${help.join('')}`;  //Displays help array
+                    newLine.appendChild(li);
+                    break;
+                    case 'about':
+                        document.querySelector('.textInput').innerHTML = '<br>';
+                        cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                        cmd.style.color = 'hsl(157deg 55% 51%)';
+                        newLine.appendChild(cmd);
+                        li.innerText = "Some random stuff about me";
+                        newLine.appendChild(li);
+                        break;
+                        case 'socials':
+                            document.querySelector('.textInput').innerHTML = '<br>';
+                            cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                            cmd.style.color = 'hsl(157deg 55% 51%)';
+                            newLine.appendChild(cmd);
+                            li.innerText = "Links to socials";
+                            newLine.appendChild(li);
+                            break;
+                            case 'projects':
+                                document.querySelector('.textInput').innerHTML = '<br';
+                                cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                                cmd.style.color = 'hsl(157deg 55% 51%)';
+                                newLine.appendChild(cmd);
+                                li.innerText = "You're looking at it";
+                                newLine.appendChild(li);
+                                break;
+                                case 'clear':
+                                    window.location.reload();
+                                    break;
+                                    case 'history':
+                                        document.querySelector('.textInput').innerHTML = '<br>';
+                                        cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                                        cmd.style.color = 'hsl(157deg 55% 51%)';
+                                        newLine.appendChild(cmd);
+                                        li.innerText = `${commands}`;
+                                        newLine.appendChild(li);
+                                        break;
+                                        case 'banner':
+                                            document.querySelector('.textInput').innerHTML= '<br>';
+                                            cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
+                                            cmd.style.color = 'hsl(157deg 55% 51%)';
+                                            newLine.appendChild(cmd);
+                                            li.innerText = `${asciiArt}`;
+                                            newLine.appendChild(li);
+                                            break;
+                                            default:
+                                                document.querySelector('.textInput').innerHTML = '<br>';
+                                                li.innerText = `${inp} command not found. For a list of commands, type 'help'.`;
+                                                newLine.appendChild(li);
+                                                break;
+                                }
+        }
+            
+};
