@@ -41,7 +41,6 @@ function main(e)
     let inp1 = document.querySelector('input');
     let socials = document.querySelector('.textInput').value.slice(5);
     if (e.key === 'Enter') { //If enter is pressed
-        console.log(socials.slice(5));
         let li = document.createElement("li");  //Allows me to create new list items
         let cmd = document.createElement("li");  //Second list item var to print command that was entered
         inp1.value = '';  //Resets text box to empty
