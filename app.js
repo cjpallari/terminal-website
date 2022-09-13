@@ -121,7 +121,7 @@ function main(e)
                                     cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
                                     cmd.style.color = 'hsl(157deg 35% 41%)';
                                     newLine.appendChild(cmd);
-                                    li.innerText = "in progress... most of my projects are located on github or are private.";
+                                    li.innerText = "in progress... most of my projects are private but a couple are located on GitHub.";
                                     newLine.appendChild(li);
                                     break;
                                     case 'clear':
