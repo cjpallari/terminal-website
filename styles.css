@@ -3,13 +3,19 @@
 }
 
 pre {
-    padding-top: 0!;
     color: hsl(279deg 53% 44%);
 }
 
 p {
     color: hsl(157deg 35% 41%);
     font-size: 1.08em;
+    letter-spacing: .05em;
+    line-height: 1.3em;
+}
+
+div{
+    color: hsl(342deg 100% 65%);
+    display: inline;
 }
 
 input {
@@ -30,37 +36,13 @@ li {
     white-space: nowrap;
     margin: 0;
     letter-spacing: 0.05em;
-    animation: typing 0.5s steps(30, end);
+    animation: typing 1s steps(30, end);
     color: hsl(193deg 50% 45%);
 }
 
 .textInput{
     color: white;
 }
-
-/*   .container {
-    width: 10px;
-    height: 10px;
-    background: white;
-    margin-top: px;
-  } */
-
-.cursor {
-    font-size: 12px;
-    color: #73ABAD;
-    background-color: #73ABAD;
-    position: relative;
-    opacity: 1;
-    height: 1.5em;
-    width: 10px;
-    max-width: 10px;
-    transform: translateY(4px);
-    overflow: hidden;
-    text-indent: -5px;
-    display: inline-block;
-    text-decoration: blink;
-    animation: blinker 1s linear infinite;
-  }
 
   @keyframes typing {
     from {
@@ -70,3 +52,4 @@ li {
       width: 100%;
     }
   }
+
