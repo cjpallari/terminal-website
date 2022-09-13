@@ -16,6 +16,12 @@ let help = [
 let about = [
     "My name is CJ Pallari, and I am currently studying computer science at Sacramento State University.\n"
 ]
+
+let link = document.querySelector("social");
+link.replace(/^open/,'').replace(/open+$/,'');
+console.log(link);
+
+
 let commands = [];
 
 document.querySelector('.textInput').addEventListener('keypress', main);
@@ -54,9 +60,13 @@ function main(e)
                             cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
                             cmd.style.color = 'hsl(157deg 35% 41%)';
                             newLine.appendChild(cmd);
-                            li.innerText = "Links to socials";
+                            li.innerText = `My links:\nTwitter\n Instagram\n LinkedIn`;
                             newLine.appendChild(li);
                             break;
+                            case `open ${link}`:
+                                if (link == 'instagram'){
+
+                                }
                             case 'projects':
                                 document.querySelector('.textInput').innerHTML = '<br';
                                 cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
