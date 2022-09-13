@@ -30,6 +30,7 @@ ul {
 
 li {
     display: block;
+    font-size: 1.08em;
     line-height: 1.3em;
     margin: 0;
     overflow: hidden;
