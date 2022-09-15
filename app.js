@@ -70,9 +70,7 @@ function main(e)
                             cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
                             cmd.style.color = 'hsl(157deg 35% 41%)';
                             newLine.appendChild(cmd);
-                            li.innerText = "To access any of these links, type 'open ' followed by the name of the site you want to reach.\n";
-                            newLine.appendChild(li);
-                            li.innerText = `my links:\nTwitter\n Instagram\n LinkedIn\n GitHub`;
+                            li.innerText = `to access any of these links, type 'open ' followed by the name of the site you want to reach.\n my links:\nTwitter\n Instagram\n LinkedIn\n GitHub`;
                             newLine.appendChild(li);
                             break;
                             case `open ${socials}`:
