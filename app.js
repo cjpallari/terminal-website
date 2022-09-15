@@ -19,8 +19,7 @@ let help = [
     /* "banner\n", */
     "help\n",
     "email\n",
-    "socials - shows a list of available options\n",
-    "to access links, type 'open (name of desired link)'\n",
+    "socials\n",
     "clear"
 ]
 
@@ -71,6 +70,8 @@ function main(e)
                             cmd.innerText = `visitor@cpcodes:~$ ${inp}`;
                             cmd.style.color = 'hsl(157deg 35% 41%)';
                             newLine.appendChild(cmd);
+                            li.innerText = "To access any of these links, type 'open ' followed by the name of the site you want to reach.\n";
+                            newLine.appendChild(li);
                             li.innerText = `my links:\nTwitter\n Instagram\n LinkedIn\n GitHub`;
                             newLine.appendChild(li);
                             break;
