@@ -22,6 +22,7 @@ input {
     text-decoration: none;
     border: none;
     outline: none;
+    color: hsl(342deg 100% 65%);
 }
 
 ul {
